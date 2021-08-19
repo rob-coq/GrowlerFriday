@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('code checkout') {
+            steps {
+                git branch: 'master', url: 'https://github.com/rob-coq/GrowlerFriday.git'
+            }
+        }
         stage('SonarQube analysis') {
             steps {
                 script {
