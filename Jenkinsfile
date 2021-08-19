@@ -19,7 +19,7 @@ pipeline {
         }
         stage ('Invoke_pipeline') {
             steps {
-                build job: 'Continuous-delivery'
+                build job: 'Continuous-delivery/master'
             }
         }
     }
