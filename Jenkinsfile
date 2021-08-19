@@ -17,5 +17,10 @@ pipeline {
                 waitForQualityGate abortPipeline: true
             }
         }
+        stage ('Invoke_pipeline') {
+            steps {
+                build job: 'Continuous-delivery'
+            }
+        }
     }
 }
